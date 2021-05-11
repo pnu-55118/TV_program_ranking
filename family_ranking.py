@@ -53,3 +53,14 @@ for data in k[0]:
 # b[2], b[3]
 
 print(a)
+print(a[1])
+import matplotlib.pyplot as plt
+for k in range(len(a[1])):
+    a[1][k]=float(a[1][k])
+plt.rc('font', family='Malgun Gothic')
+
+x=list(range(1,21))
+program=a[0]
+plt.plot(x,a[1])
+plt.xticks(x,program,rotation='vertical')
+plt.show()
