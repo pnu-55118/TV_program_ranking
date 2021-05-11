@@ -51,3 +51,39 @@ for data in k[1]:
 # b = [[순위],[채널],[프로그램],[시청자수]]
 # b[2], b[3]
 
+# for k in range(len(b[1])):
+#     b[1].replace(b[1][k],float(b[1][k]))
+# print(b[1])
+
+# for i in b[1]:
+#     if ',' in i:
+#         i=i.remove(',')
+# for k in range(len(b[1])):
+#     b[1].replace(b[1][k],float(b[1][k]))
+
+# for i in b[1]:
+#     if ',' in i:
+#         t=i.split(',')
+#         i=t[0]+t[1]
+#         print(i)
+
+
+
+# for k in range(len(b[1])):
+    # b[1][k]=float(b[1][k])
+
+for i in range(len(b[1])):
+    if ','in b[1][i]:
+        b[1][i]=b[1][i].replace(',','')
+
+
+import matplotlib.pyplot as plt
+for k in range(len(b[1])):
+    b[1][k]=float(b[1][k])
+plt.rc('font', family='Malgun Gothic')
+
+x=list(range(1,21))
+program=b[0]
+plt.plot(x,b[1])
+plt.xticks(x,program,rotation='vertical')
+plt.show()
